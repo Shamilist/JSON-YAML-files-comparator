@@ -1,5 +1,6 @@
 {
   "name": "@hexlet/code",
+  "type": "module",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Shamilist/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Shamilist/frontend-project-lvl2/actions)",
   "main": "index.js",
@@ -16,6 +17,9 @@
     "url": "https://github.com/Shamilist/frontend-project-lvl2/issues"
   },
   "homepage": "https://github.com/Shamilist/frontend-project-lvl2#readme",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
   "dependencies": {
     "commander": "^8.3.0"
   }
