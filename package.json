@@ -20,6 +20,7 @@
     "gendiff": "bin/gendiff.js"
   },
   "dependencies": {
-    "commander": "^8.3.0"
+    "commander": "^8.3.0",
+    "lodash": "^4.17.21"
   }
 }
