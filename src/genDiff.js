@@ -1,12 +1,12 @@
-import _ from 'lodash';
+const _ = require('lodash');
 
-const genDiff = (object1, object2) => {
+const genDiff = (object1 , object2) => {
     let resultObject = '';
 
     const jsonObj1 = JSON.parse(object1);
     const jsonObj2 = JSON.parse(object2);
 
-    const commonKeys = (_.union(_.keys(jsonObj1), _.keys(object2))).sort();
+    const commonKeys = (_.union(_.keys(object1), _.keys(object2))).sort();
 
     for (const name of commonKeys) {
         if (!_.has(jsonObj1, name)) { // если объект1 не содержит ключ - значит его добавили во второй
@@ -27,4 +27,4 @@ const genDiff = (object1, object2) => {
     return  `{${resultObject}\n}`;
   };
   
-  export default genDiff;
+  module.exports = genDiff;
