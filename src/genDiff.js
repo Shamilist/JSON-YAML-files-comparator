@@ -6,7 +6,7 @@ const genDiff = (object1, object2) => {
     const jsonObj1 = JSON.parse(object1);
     const jsonObj2 = JSON.parse(object2);
 
-    const commonKeys = _.union(_.keys(jsonObj1), _.keys(object2));
+    const commonKeys = (_.union(_.keys(jsonObj1), _.keys(object2))).sort();
 
     for (const name of commonKeys) {
         if (!_.has(jsonObj1, name)) { // если объект1 не содержит ключ - значит его добавили во второй
