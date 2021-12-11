@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Shamilist/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Shamilist/frontend-project-lvl2/actions)",
   "main": "src/genDiff.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +23,10 @@
   "dependencies": {
     "commander": "^8.3.0",
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3"
   }
 }

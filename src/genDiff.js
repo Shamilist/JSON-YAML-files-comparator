@@ -1,30 +1,31 @@
-const _ = require('lodash');
+import _ from 'lodash';
 
-const genDiff = (object1 , object2) => {
-    let resultObject = '';
-    
-    const jsonObj1 = JSON.parse(object1);
-    const jsonObj2 = JSON.parse(object2);
+const genDiff = (object1, object2) => {
+  let resultObject = '';
 
-    const commonKeys = (_.union(_.keys(jsonObj1), _.keys(jsonObj2))).sort();
+  const jsonObj1 = JSON.parse(object1);
+  const jsonObj2 = JSON.parse(object2);
 
-    for (const name of commonKeys) {
-        if (!_.has(jsonObj1, name)) { // если объект1 не содержит ключ - значит его добавили во второй
-        resultObject = `${resultObject}
+  const commonKeys = (_.union(_.keys(jsonObj1), _.keys(jsonObj2))).sort();
+
+  // eslint-disable-next-line no-restricted-syntax
+  for (const name of commonKeys) {
+    if (!_.has(jsonObj1, name)) {
+      resultObject = `${resultObject}
 + ${name}: ${jsonObj2[name]}`;
-      } else if (!_.has(jsonObj2, name)) { // если объект2 не содержит ключ - значит его удалили во втором
-        resultObject = `${resultObject}
+    } else if (!_.has(jsonObj2, name)) {
+      resultObject = `${resultObject}
 - ${name}: ${jsonObj1[name]}`;
-      } else if (jsonObj1[name] !== jsonObj2[name]) { // если свойства двух объектов с одинаковым ключом не равны - значит свойство поменяли
-        resultObject = `${resultObject}
+    } else if (jsonObj1[name] !== jsonObj2[name]) {
+      resultObject = `${resultObject}
 - ${name}: ${jsonObj1[name]}
 + ${name}: ${jsonObj2[name]}`;
-      } else {
-        resultObject = `${resultObject}
-  ${name}: ${jsonObj1[name]}`; // объекты равны - значит ничего не меняли
-      }
+    } else {
+      resultObject = `${resultObject}
+  ${name}: ${jsonObj1[name]}`;
     }
-    return  `{${resultObject}\n}`;
-  };
-  
-  module.exports = genDiff;
+  }
+  return `{${resultObject}\n}`;
+};
+
+export default genDiff;
