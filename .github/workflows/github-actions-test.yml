@@ -27,9 +27,13 @@ jobs:
       - name: Run Linter
         run: |
           make lint
-      - name: Run test
-        run: |
-          make test
+      - name: Run Make Test & Code Coverage
+        uses: paambaati/codeclimate-action@v2.7.4
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.NEW_SECRET }}
+        with:
+          coverageCommand: make test-coverage
+          debug: true
           
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
