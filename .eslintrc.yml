@@ -6,4 +6,6 @@ extends:
 parserOptions:
   ecmaVersion: 13
   sourceType: module
-rules: {}
+rules:
+  no-console: off
+  import/extensions: 0 # получить возможность указывать при импорте файлы с расширением
