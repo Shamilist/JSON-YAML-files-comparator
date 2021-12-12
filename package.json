@@ -5,7 +5,8 @@
   "main": "src/genDiff.js",
   "type": "module",
   "scripts": {
-    "test": "npx jest --bail"
+    "test": "npx jest",
+    "test-coverage": "npx jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,8 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jest": "^25.3.0",
     "jest": "^27.4.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
