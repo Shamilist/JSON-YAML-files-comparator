@@ -8,7 +8,6 @@ const genDiff = (object1, object2) => {
 
   const commonKeys = (_.union(_.keys(jsonObj1), _.keys(jsonObj2))).sort();
 
-  // eslint-disable-next-line no-restricted-syntax
   for (const name of commonKeys) {
     if (!_.has(jsonObj1, name)) {
       resultObject = `${resultObject}

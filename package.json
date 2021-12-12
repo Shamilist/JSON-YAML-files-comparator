@@ -5,7 +5,7 @@
   "main": "src/genDiff.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest --watch"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "eslint": "^8.4.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.3.0",
     "jest": "^27.4.4"
   }
 }

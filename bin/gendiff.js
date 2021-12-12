@@ -4,7 +4,6 @@ import * as fs from 'fs';
 import path from 'path';
 import process from 'process';
 import program from 'commander';
-// eslint-disable-next-line import/extensions
 import genDiff from '../src/genDiff.js';
 
 program
