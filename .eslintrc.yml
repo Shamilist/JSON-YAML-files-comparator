@@ -3,6 +3,7 @@ env:
   node: true
 extends:
   - airbnb-base
+  - plugin:jest/recommended
 parserOptions:
   ecmaVersion: 13
   sourceType: module
