@@ -12,17 +12,17 @@ const genDiff = (object1, object2) => {
   for (const name of commonKeys) {
     if (!_.has(jsonObj1, name)) {
       resultObject = `${resultObject}
- + ${name}: ${jsonObj2[name]}`;
+  + ${name}: ${jsonObj2[name]}`;
     } else if (!_.has(jsonObj2, name)) {
       resultObject = `${resultObject}
- - ${name}: ${jsonObj1[name]}`;
+  - ${name}: ${jsonObj1[name]}`;
     } else if (jsonObj1[name] !== jsonObj2[name]) {
       resultObject = `${resultObject}
- - ${name}: ${jsonObj1[name]}
- + ${name}: ${jsonObj2[name]}`;
+  - ${name}: ${jsonObj1[name]}
+  + ${name}: ${jsonObj2[name]}`;
     } else {
       resultObject = `${resultObject}
-  ${name}: ${jsonObj1[name]}`;
+    ${name}: ${jsonObj1[name]}`;
     }
   }
   return `{${resultObject}\n}`;
