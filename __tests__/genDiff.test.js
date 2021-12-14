@@ -19,3 +19,11 @@ test('genDiff json files', () => {
   const makeGendiff = genDiff(file1, file2);
   expect(makeGendiff).toEqual(resultFile);
 });
+
+test('genDiff yaml files', () => {
+  const file1 = readFile(getFixturePath('file1.yaml'));
+  const file2 = readFile(getFixturePath('file2.yaml'));
+  const resultFile = readFile(getFixturePath('expected_yaml.txt'));
+  const makeGendiff = genDiff(file1, file2);
+  expect(makeGendiff).toEqual(resultFile);
+});
