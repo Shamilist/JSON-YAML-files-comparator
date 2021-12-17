@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import parsers from './parser.js';
+import parsers from './parsers.js';
 
 const genDiff = (object1, object2) => {
   let resultObject = '';
