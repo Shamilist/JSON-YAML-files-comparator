@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import * as fs from 'fs';
 import path from 'path';
 import process from 'process';
 import program from 'commander';
@@ -15,6 +14,6 @@ program
   .action((filepath1, filepath2) => {
     const filepath1Path = path.resolve(process.cwd(), filepath1);
     const filepath2Path = path.resolve(process.cwd(), filepath2);
-    console.log(genDiff(fs.readFileSync(filepath1Path), fs.readFileSync(filepath2Path)));
+    console.log(genDiff(filepath1Path, filepath2Path));
   })
   .parse();

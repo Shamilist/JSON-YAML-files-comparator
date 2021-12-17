@@ -1,10 +1,10 @@
 import _ from 'lodash';
+import parsers from './parser.js';
 
 const genDiff = (object1, object2) => {
   let resultObject = '';
-
-  const jsonObj1 = JSON.parse(object1);
-  const jsonObj2 = JSON.parse(object2);
+  const jsonObj1 = parsers(object1);
+  const jsonObj2 = parsers(object2);
 
   const commonKeys = (_.union(_.keys(jsonObj1), _.keys(jsonObj2))).sort();
 
