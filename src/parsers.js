@@ -8,10 +8,10 @@ const parsers = (file) => {
 
   switch (true) {
     case fileExtention === '.json':
-      return JSON.parse(readFile); // пробразую в строку
+      return JSON.parse(readFile); // преобразую в строку
 
     case fileExtention === '.yml' || fileExtention === '.yaml':
-      return yaml.load(readFile); // пробразую в строку
+      return yaml.load(readFile); // преобразую в строку
 
     default:
       return new Error(`Parsing a ${file} with '${fileExtention}' extention is not possibly`);

@@ -10,19 +10,26 @@ const genDiff = (object1, object2) => {
 
   // eslint-disable-next-line no-restricted-syntax
   for (const name of commonKeys) {
-    if (!_.has(jsonObj1, name)) {
-      resultObject = `${resultObject}
+    switch (true) {
+      case (!_.has(jsonObj1, name)):
+        resultObject = `${resultObject}
   + ${name}: ${jsonObj2[name]}`;
-    } else if (!_.has(jsonObj2, name)) {
-      resultObject = `${resultObject}
+        break;
+      case (!_.has(jsonObj2, name)):
+        resultObject = `${resultObject}
   - ${name}: ${jsonObj1[name]}`;
-    } else if (jsonObj1[name] !== jsonObj2[name]) {
-      resultObject = `${resultObject}
+        break;
+      case (jsonObj1[name] !== jsonObj2[name]):
+        resultObject = `${resultObject}
   - ${name}: ${jsonObj1[name]}
   + ${name}: ${jsonObj2[name]}`;
-    } else {
-      resultObject = `${resultObject}
+        break;
+      case (jsonObj1[name] === jsonObj2[name]):
+        resultObject = `${resultObject}
     ${name}: ${jsonObj1[name]}`;
+        break;
+      default:
+        throw new Error('Error of formatted');
     }
   }
   return `{${resultObject}\n}`;
