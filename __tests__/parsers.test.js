@@ -12,10 +12,30 @@ const getFixturePath = (filename) => path.join(dirName, '..', '__fixtures__', fi
 test('parse to Json', () => {
   const jsonFile = getFixturePath('file1.json');
   const resultFile = {
-    host: 'hexlet.io',
-    timeout: 50,
-    proxy: '123.234.53.22',
-    follow: false,
+    common: {
+      setting1: 'Value 1',
+      setting2: 200,
+      setting3: true,
+      setting6: {
+        key: 'value',
+        doge: {
+          wow: '',
+        },
+      },
+    },
+    group1: {
+      baz: 'bas',
+      foo: 'bar',
+      nest: {
+        key: 'value',
+      },
+    },
+    group2: {
+      abc: 12345,
+      deep: {
+        id: 45,
+      },
+    },
   };
   expect(parsers(jsonFile)).toEqual(resultFile);
 });
@@ -23,10 +43,14 @@ test('parse to Json', () => {
 test('parse to Yaml', () => {
   const yamlFile = getFixturePath('file1.yaml');
   const resultFile = {
-    host: 'hexlet.io',
-    timeout: 50,
-    proxy: '123.234.53.22',
-    follow: false,
+    common: {
+      setting1: 'Value 1',
+      setting2: 200,
+      setting3: true,
+      setting6: { key: 'value', doge: { wow: '' } },
+    },
+    group1: { baz: 'bas', foo: 'bar', nest: { key: 'value' } },
+    group2: { abc: 12345, deep: { id: 45 } },
   };
   expect(parsers(yamlFile)).toEqual(resultFile);
 });
