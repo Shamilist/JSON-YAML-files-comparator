@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import path from 'path';
-import process from 'process';
-import program from 'commander';
+import { Command } from 'commander/esm.mjs';
 import genDiff from '../src/genDiff.js';
+
+const program = new Command();
 
 program
   .description('Compares two configuration files and shows a difference.')
@@ -11,9 +11,8 @@ program
   .option('-f, --format <type>', 'output format')
   .argument('<filepath1>')
   .argument('<filepath2>')
-  .action((filepath1, filepath2) => {
-    const filepath1Path = path.resolve(process.cwd(), filepath1);
-    const filepath2Path = path.resolve(process.cwd(), filepath2);
-    console.log(genDiff(filepath1Path, filepath2Path));
+  .option('-f, --format <type>', 'output format', 'stylish')
+  .action((filepath1, filepath2, options) => {
+    console.log(genDiff(filepath1, filepath2, options.format));
   })
-  .parse();
+  .parse(process.argv);

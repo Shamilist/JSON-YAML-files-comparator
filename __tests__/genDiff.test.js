@@ -12,7 +12,7 @@ const getFixturePath = (filename) => path.join(dirName, '..', '__fixtures__', fi
 
 const readFile = (filename) => fs.readFileSync((filename), 'utf-8'); // чтение файла
 
-test('genDiff json files', () => {
+test('genDiff stylish json files', () => {
   const file1 = getFixturePath('file1.json');
   const file2 = getFixturePath('file2.json');
   const resultFile = readFile(getFixturePath('expectedstylish_test.txt'));
@@ -20,7 +20,7 @@ test('genDiff json files', () => {
   expect(makeGendiff).toEqual(resultFile);
 });
 
-test('genDiff yaml files', () => {
+test('genDiff stylish yaml files', () => {
   const file1 = getFixturePath('file1.yaml');
   const file2 = getFixturePath('file2.yaml');
   const resultFile = readFile(getFixturePath('expectedstylish_test.txt'));
