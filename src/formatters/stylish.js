@@ -1,17 +1,17 @@
 import _ from 'lodash';
 
-const makeIndent = (n) => ' '.repeat(n); // повторить пробел нужное количество раз
+const makeIndent = (n) => ' '.repeat(n);
 
-const indentSize = 2; // что это за отступ?
-const baseIndent = 4; // базовый отступ
-const baseCloseIndent = 2; // что это за отступ?
+const indentSize = 2;
+const baseIndent = 4;
+const baseCloseIndent = 2;
 
-const stringify = (data, depth) => { // что делает эта функция?
+const stringify = (data, depth) => {
   if (!_.isPlainObject(data)) return data;
 
-  const currentIndent = depth + indentSize * baseIndent; // что это?
-  const closeIndent = indentSize * baseCloseIndent; // что это?
-  const lines = Object.entries(data) // подсчет линий?
+  const currentIndent = depth + indentSize * baseIndent;
+  const closeIndent = indentSize * baseCloseIndent;
+  const lines = Object.entries(data)
     .map(([key, value]) => {
       if (_.isPlainObject(value)) {
         return `${makeIndent(currentIndent)}${key}: ${stringify(value, depth + closeIndent)}`;
@@ -21,7 +21,7 @@ const stringify = (data, depth) => { // что делает эта функци�
   return ['{', ...lines, `${makeIndent(depth + closeIndent)}}`].join('\n');
 };
 
-export default (tree) => { // что делает эта функция?
+export default (tree) => {
   const iter = (currenValue, depth) => {
     const lines = currenValue.map(({
       key, type, value, beforeValue, afterValue, children,
