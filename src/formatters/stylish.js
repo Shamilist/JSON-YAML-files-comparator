@@ -33,7 +33,7 @@ export default (tree) => { // что делает эта функция?
           return `${makeIndent(depth + indentSize)}- ${key}: ${stringify(value, depth)}`;
         case 'changed':
           return `${makeIndent(depth + indentSize)}- ${key}: ${stringify(beforeValue, depth)}
-          ${makeIndent(depth + indentSize)}- ${key}: ${stringify(afterValue, depth)}`;
+          ${makeIndent(depth + indentSize)}+ ${key}: ${stringify(afterValue, depth)}`;
         case 'unchanged':
           return `${makeIndent(depth + indentSize)}  ${key}: ${stringify(value, depth)}`;
         case 'hasChildren':
