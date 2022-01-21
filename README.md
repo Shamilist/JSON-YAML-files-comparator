@@ -13,3 +13,6 @@ Difference between 2 JSON files
 
 Difference between 2 YAML files
 [![asciicast](https://asciinema.org/a/S51yDrGi6T5gHU0dfZNtruDs5.svg)](https://asciinema.org/a/S51yDrGi6T5gHU0dfZNtruDs5)
+
+Difference beetwen 2 nested structure files with 'stylish' formatter
+[![asciicast](https://asciinema.org/a/QdgYEehzgUMEme9iZz105ADiN.svg)](https://asciinema.org/a/QdgYEehzgUMEme9iZz105ADiN)
