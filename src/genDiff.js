@@ -1,38 +1,13 @@
-import _ from 'lodash';
-import parsers from './parsers.js';
+import parse from './parsers.js';
+import makeTree from './makeTree.js';
+import formatter from './formatters/stylish.js';
 
-const genDiff = (object1, object2) => {
-  let resultObject = '';
-  const jsonObj1 = parsers(object1);
-  const jsonObj2 = parsers(object2);
+const genDiff = (object1, object2, formater = 'stylish') => {
+  const file1 = parse(object1);
+  const file2 = parse(object2);
 
-  const commonKeys = (_.union(_.keys(jsonObj1), _.keys(jsonObj2))).sort();
-
-  // eslint-disable-next-line no-restricted-syntax
-  for (const name of commonKeys) {
-    switch (true) {
-      case (!_.has(jsonObj1, name)):
-        resultObject = `${resultObject}
-  + ${name}: ${jsonObj2[name]}`;
-        break;
-      case (!_.has(jsonObj2, name)):
-        resultObject = `${resultObject}
-  - ${name}: ${jsonObj1[name]}`;
-        break;
-      case (jsonObj1[name] !== jsonObj2[name]):
-        resultObject = `${resultObject}
-  - ${name}: ${jsonObj1[name]}
-  + ${name}: ${jsonObj2[name]}`;
-        break;
-      case (jsonObj1[name] === jsonObj2[name]):
-        resultObject = `${resultObject}
-    ${name}: ${jsonObj1[name]}`;
-        break;
-      default:
-        throw new Error('Error of formatted');
-    }
-  }
-  return `{${resultObject}\n}`;
+  const tree = makeTree(file1, file2);
+  return formatter(tree, formater);
 };
 
 export default genDiff;
