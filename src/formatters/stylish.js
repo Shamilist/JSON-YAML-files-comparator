@@ -18,7 +18,7 @@ const stringify = (data, depth) => { // что делает эта функци�
       }
       return `${makeIndent(currentIndent)}${key}: ${value}`;
     });
-  return ['{', ...lines, `${makeIndent(depth + closeIndent)}},`].join('\n');
+  return ['{', ...lines, `${makeIndent(depth + closeIndent)}}`].join('\n');
 };
 
 export default (tree) => { // что делает эта функция?
