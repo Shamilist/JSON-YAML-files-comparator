@@ -1,6 +1,6 @@
 import parse from './parsers.js';
 import makeTree from './makeTree.js';
-import formatter from './formatters/stylish.js';
+import formatter from './formatters/index.js';
 
 const genDiff = (object1, object2, formater = 'stylish') => {
   const file1 = parse(object1);
