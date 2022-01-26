@@ -16,3 +16,6 @@ Difference between 2 YAML files
 
 Difference beetwen 2 nested structure files with 'stylish' formatter
 [![asciicast](https://asciinema.org/a/QdgYEehzgUMEme9iZz105ADiN.svg)](https://asciinema.org/a/QdgYEehzgUMEme9iZz105ADiN)
+
+Difference beetwen 2 nested structure files with 'plain' formatter
+[![asciicast](https://asciinema.org/a/NuEQb1p7XNmcW8dSZClm1zv8x.svg)](https://asciinema.org/a/NuEQb1p7XNmcW8dSZClm1zv8x)
