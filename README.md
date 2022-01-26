@@ -7,6 +7,8 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b59f0f96ae430334abdf/test_coverage)](https://codeclimate.com/github/Shamilist/frontend-project-lvl2/test_coverage)
 
+### Examples of using the program
+
 
 Difference between 2 JSON files
 [![asciicast](https://asciinema.org/a/xa6PfpEsq4DOMgt2Crb9rDvgB.svg)](https://asciinema.org/a/xa6PfpEsq4DOMgt2Crb9rDvgB)
