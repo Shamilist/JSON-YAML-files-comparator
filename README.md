@@ -19,3 +19,6 @@ Difference beetwen 2 nested structure files with 'stylish' formatter
 
 Difference beetwen 2 nested structure files with 'plain' formatter
 [![asciicast](https://asciinema.org/a/NuEQb1p7XNmcW8dSZClm1zv8x.svg)](https://asciinema.org/a/NuEQb1p7XNmcW8dSZClm1zv8x)
+
+Difference beetwen 2 nested structure files with 'json' formatter
+[![asciicast](https://asciinema.org/a/vS0VCrKGfve6z5XoJ881Q8ZhI.svg)](https://asciinema.org/a/vS0VCrKGfve6z5XoJ881Q8ZhI)
