@@ -9,9 +9,20 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b59f0f96ae430334abdf/test_coverage)](https://codeclimate.com/github/Shamilist/frontend-project-lvl2/test_coverage)
 
 
+## About program
+
+This program compares two files in 'json' or 'yaml' format and gets the difference between them.
+
 ## How to setup
 
-$ make install
+1. Clone this repository.
+2. Go to directory frontend-project-lvl2.
+3. $ make install
+4. $ make link
+
+## How to use
+
+
 
 ## Examples of using the program
 
