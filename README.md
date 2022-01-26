@@ -23,7 +23,7 @@ This program compare two files in 'json' or 'yaml' format and get the difference
 ## How to use
 
 You can use formats:
-1. stylish = (default);
+1. stylish = default formatter;
 2. plain
 3. json
 
