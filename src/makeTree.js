@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 const makeTree = (data1, data2) => {
-  const commonKeys = (_.union(_.keys(data1), _.keys(data2))).sort();
+  const commonKeys = _.sortBy(_.union(_.keys(data1), _.keys(data2)));
 
   const result = commonKeys.map((key) => {
     const value1 = data1[key];
