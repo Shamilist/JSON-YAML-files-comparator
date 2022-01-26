@@ -27,7 +27,7 @@ You can use formats:
 2. plain
 3. json
 
-$ gendiff filepath1.(json/yml) filepath2.(json/yml)
+$ gendiff filepath1.(json/yml) filepath2.(json/yml)  
 $ gendiff --f <format> filepath1.(json/yaml) filepath2.(json/yaml)
 
 
