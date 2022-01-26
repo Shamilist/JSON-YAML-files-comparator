@@ -41,3 +41,15 @@ test('genDiff with plain formatter json files', () => {
   const makeGendiff = genDiff(jsonFile1, jsonFile2, 'plain');
   expect(makeGendiff).toEqual(resultFile);
 });
+
+test('genDiff with json formatter yaml files', () => {
+  const resultFile = readFile(getFixturePath('expectedJson.txt'));
+  const makeGendiff = genDiff(yamlFile1, yamlFile2, 'json');
+  expect(makeGendiff).toEqual(resultFile);
+});
+
+test('genDiff with json formatter json files', () => {
+  const resultFile = readFile(getFixturePath('expectedJson.txt'));
+  const makeGendiff = genDiff(jsonFile1, jsonFile2, 'json');
+  expect(makeGendiff).toEqual(resultFile);
+});
