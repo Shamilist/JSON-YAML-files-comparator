@@ -1,4 +1,4 @@
-### Hexlet tests and linter status:
+## Hexlet tests and linter status
 ***
 [![Actions Status](https://github.com/Shamilist/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Shamilist/frontend-project-lvl2/actions)
 
@@ -9,7 +9,11 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b59f0f96ae430334abdf/test_coverage)](https://codeclimate.com/github/Shamilist/frontend-project-lvl2/test_coverage)
 
 
-### Examples of using the program
+## How to setup
+***
+$ make install
+
+## Examples of using the program
 ***
 
 Difference between 2 JSON files
