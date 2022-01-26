@@ -11,7 +11,7 @@
 
 ## About program
 
-This program compare two files in 'json' or 'yaml' format and get the difference between them in 3 formats.
+This program compare two files in 'json' and 'yaml' format and get the difference between them in 3 formats.
 
 ## How to setup
 
