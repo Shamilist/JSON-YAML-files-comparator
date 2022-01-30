@@ -18,10 +18,8 @@ const makeTree = (data1, data2) => {
         return {
           key, type: 'changed', beforeValue: value1, afterValue: value2,
         };
-      case (_.isEqual(value1, value2)):
-        return { key, type: 'unchanged', value: value1 };
       default:
-        throw new Error('Error of formatted');
+        return { key, type: 'unchanged', value: value1 };
     }
   });
   return result;
