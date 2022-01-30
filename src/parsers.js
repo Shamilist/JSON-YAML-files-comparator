@@ -7,11 +7,11 @@ const parsers = (file) => {
   const readFile = fs.readFileSync(file, 'utf-8');
 
   switch (true) {
-    case fileExtention === 'json':
+    case fileExtention === '.json':
       return JSON.parse(readFile);
 
-    case fileExtention === 'yml':
-    case fileExtention === 'yaml':
+    case fileExtention === '.yml':
+    case fileExtention === '.yaml':
       return yaml.load(readFile);
 
     default:
