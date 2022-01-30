@@ -1,21 +1,16 @@
-import fs from 'fs';
-import path from 'path';
 import yaml from 'js-yaml';
 
-const parsers = (file) => {
-  const fileExtention = path.extname(file);
-  const readFile = fs.readFileSync(file, 'utf-8');
+const parsers = (data, extension) => {
+  switch (extension) {
+    case 'json':
+      return JSON.parse(data);
 
-  switch (true) {
-    case fileExtention === '.json':
-      return JSON.parse(readFile);
-
-    case fileExtention === '.yml':
-    case fileExtention === '.yaml':
-      return yaml.load(readFile);
+    case 'yml':
+    case 'yaml':
+      return yaml.load(data);
 
     default:
-      return new Error(`Parsing a ${file} with '${fileExtention}' extention is not possibly`);
+      return new Error(`Parsing a ${data} with '${extension}' extention is not possibly`);
   }
 };
 
