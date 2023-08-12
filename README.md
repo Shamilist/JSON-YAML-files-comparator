@@ -1,4 +1,4 @@
-## Hexlet tests and linter status
+## Tests and linter status
 
 [![github-actions-test](https://github.com/Shamilist/frontend-project-lvl2/actions/workflows/github-actions-test.yml/badge.svg?branch=main)](https://github.com/Shamilist/frontend-project-lvl2/actions/workflows/github-actions-test.yml)
 
